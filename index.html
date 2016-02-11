@@ -14,12 +14,14 @@
 
       <div class = "content"> 
         <h1 class="top-border">SHOPPING LIST</h1>
-          <form>
+        
+          <form id="newItemForm">
           <input class="form" type="text" name="item" maxlength="30" placeholder="enter item here..."/>
-          <input type="submit" value="+"/>
+          <input id="newItemButton" type="submit" value="+"/>
           </form>
         <div class = "box to-get">
           <h2>to get :</h2>
+         <ul id="listGet"></ul>
         </div>
         <div class = "box complete">
           <h2>completed :</h2>
@@ -27,5 +29,7 @@
 
       </div>
     </div>
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script src="js/main.js"></script>
   </body>
 </html>

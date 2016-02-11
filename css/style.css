@@ -66,6 +66,8 @@ button{
   position: relative;
   margin: 10px auto 10px auto;
   z-index:3;
+  border-radius: 5px;
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -82,4 +84,9 @@ button{
   left: 5px;
   font-weight: bold;
   color: #ECF0F1; 
+}
+
+.box li {
+  color:#ECF0F1;
+  z-index:4;
 }
