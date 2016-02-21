@@ -7,8 +7,7 @@
 html {
   width: 100%;
   height: 100%;
-  background-color: #525659  ;
-  overflow: hidden;
+
 }
 body {
   margin: 0;
@@ -19,6 +18,14 @@ body {
   width: 100%;
   font-family: "avenir", sans-serif;
   text-align: center;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+span {
+  padding-left: 10px;
 }
 
 .form {
@@ -35,18 +42,45 @@ button{
   width:  30px;
 }
 
+.banner {
+  height: 30px;
+  background-color: #44362b;
+
+}
+
+.intro {
+  height: 400px;
+  width: 100%;
+  background-color: #E74C3C;
+  overflow: hidden;
+}
+
+.intro h1, h2{
+  letter-spacing: 5px;
+  top:40%;
+  font-family: futura-bold, sans-serif;
+  color: #44362b;
+  position: relative;
+  font-weight: 30px;
+}
+
+.intro h2{
+  color: #e6d9c8;
+}
+
 .pad {
   margin:  30px auto 50px;
   max-width: 300px;
   background: #f7f7f7  ;
   z-index: 1;
-  height: 90%;
+  min-height: 90%;
   box-shadow: 0px 2px 4px 0px       rgba(0,0,0,0.50);
 }
 
 .top-border {
+  height: 55px;
   text-align: center;
-  background-color: #696969;
+  background-color: #44362b;
   color: white;
   font-weight: 300;
   margin: auto;
@@ -54,20 +88,29 @@ button{
   color: #ECF0F1;
   line-height: 60px;
   vertical-align: middle;
+  font-size: 25px;
 }
 
-
+#newItemButton {
+  height: 30px;
+width: 30px;
+  background-color: #E74C3C;
+  border: 1px solid #E74C3C;
+  color: #f7f7f7;
+  text-decoration:none;
+  vertical-align: middle;
+  border-radius: 5px;
+}
 
 .box {
   display: block;
   max-width: 250px;
   background: #E74C3C;
-  height: 150px;
+  min-height: 450px;
   position: relative;
   margin: 10px auto 10px auto;
   z-index:3;
   border-radius: 5px;
-
 }
 
 @media only screen and (min-width: 768px) {
@@ -77,6 +120,7 @@ button{
 
 .box h2 {
   text-transform: uppercase;
+  letter-spacing: 0px;
   margin: auto;
   font-size: 14px;
   position: absolute;
@@ -86,7 +130,24 @@ button{
   color: #ECF0F1; 
 }
 
+.box ul{
+  padding: 30px;
+}
 .box li {
   color:#ECF0F1;
-  z-index:4;
+  list-style-type:none;
+  text-align: left;
+}
+
+.checkbox, .xbox, .check{
+  vertical-align: middle;
+}
+
+.check{
+  background-image: url(images/check.png);
+}
+
+.xbox {
+ left: 75%;
+  position: absolute;
 }

@@ -1,29 +1,29 @@
+var $list, $newItemForm, $newItemButton, $additems;
+var item = '';
+$additems = $("#additems");
+$newItemForm = $("#newItemForm");
+$newItemButton = $("#newItemButton");
+$list = $('ul#listItems');
+$listComplete = $('ul#list-complete');
+var xbox = $('.xbox');
 
-$(document).ready(function(){ 
-  /* add item with click */ $("#newItemButton").click(addItem);
-  /* add item with enter */
-  $("#newItemForm").keydown(function(event){
-    var keycode = event.keycode;
-    if(keycode == 13){
-      addItem();
-    }
-	});
+
+$newItemForm.on('submit', function(e){
+  e.preventDefault();
+  var checkbox = "<img width=\"25px\" src=\"images/checkbox.png\" class=\"checkbox\">";
+  var xout = "<img width=\"25px\" src=\"images/xbox.png\" class=\"xbox\">";
+  var check = "<img width=\"25px\" src=\"images/check.png\" class=\"check\">";
+  var span = "<class=\"span\">";
+  var text = $('input:text').val();
+  $list.append('<li>' + checkbox + check + span + text + xout +'</li>');
+  $('input:text').val('');
+  $('.check').hide();
+
+  $('.xbox').click (function(){
+    $(this).closest('li').remove();
+  }); 
+
+  $('.checkbox').click(function(){
+    $(this).attr('src', 'images/check.png');    
+  });
 });
-
-function addItem(){
-  var newItem = $("newItemForm").val();
-  if (newItem.trim().length === 0){
-    alert("You must enter an item to be added.");
-        return;
-	}
-  var listItem = createListItem(newItem);
-	$("#listGet").append(listItem);
-	$("#newItemForm").val("");
-  }
-
-function createListItem(newItem) {
-	var listItem = "<li class='ui-state-default'><input type='checkbox'>"; 
-	listItem += "<span>" + newItem + "</span>";
-	listItem += "<a href='#'>remove</a></li>";
-	return listItem; 
-}
